@@ -56,9 +56,9 @@ const client = new Client({
 
 client.initialize();
 
-app.get('/', (req,res) => {
-    res.sendFile('index.html', { root: __dirname });
-});
+// app.get('/', (req,res) => {
+//     res.sendFile('index.html', { root: __dirname });
+// });
 
 app.post('/send-message', (req, res) => {
     const number = req.body.number;
