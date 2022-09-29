@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            Whatsapp API
+        </title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Whatsapp API</h1>
+            <img src="" alt="QR Code" id="qrcode">
+            <h3>Logs:</h3>
+            <ul class="logs"></ul>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.min.js" integrity="sha512-xzC4RSo+4m1clLhr0pQr6yFjO9bJ0py6+l65SBibI8/pSEU8U4iVZ7xm95WRq8PXw2MKv8SSR3QkqR2jciG5Ug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            $(document).ready(function() {
+                var socket = io();
+    
+                socket.on('message', function(msg) {
+                    $('.logs').prepend($('<li>').text(msg));
+                });
+    
+                socket.on('qr', function(src) {
+                    $('#qrcode').attr('src', src);
+                    $('#qrcode').show();
+                });
+    
+                // socket.on('ready', function(data) {
+                //     $('#qrcode').hide();
+                // });
+    
+                // socket.on('authenticated', function(data) {
+                //     $('#qrcode').hide();
+                // });
+            });
+        </script>
+
+    </body>
+</html>
