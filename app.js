@@ -17,13 +17,23 @@ const io = require('socket.io')(httpServer, {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const client = new Client({   
+const client = new Client({
     restartOnAuthFail: true,
-    authStrategy: new LocalAuth(),
-    puppeteer : {
-        headless : true
-    }, 
-});
+    puppeteer: {
+      headless: true,
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-accelerated-2d-canvas',
+        '--no-first-run',
+        '--no-zygote',
+        '--single-process', // <- this one doesn't works in Windows
+        '--disable-gpu'
+      ],
+    },
+    authStrategy: new LocalAuth()
+  });
 
 // client.on('authenticated', () => {
 //     console.log('AUTHENTICATED');
