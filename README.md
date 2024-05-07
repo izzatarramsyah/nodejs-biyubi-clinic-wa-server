@@ -1,10 +1,13 @@
-# Description
-Javascript API for Sending Whatsapp Message to Biyubi App Clinic
+# NodeJS Simple Project
 
-# Project 
-Biyubi Clinic Growth Monitoring for 0-2 years child accroding Z Score WHO
+## Project Name
+Biyubi Clinic Growth Monitoring App 
 
-# Stack
-Node JS, Whatsapp API
+## Project Description
+Simple Node JS for Sending Whatsapp message Web Application with Growth Monitoring for 0-2 Years Child Accroding Z Score WHO Case Study
 
-
+## Project Stack
+- Node JS
+- npm
+- whatsapp-web.js
+- socket.io
