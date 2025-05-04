@@ -1,13 +1,53 @@
-# NodeJS Simple Project
+# Biyubi Clinic Growth Monitoring App (Node.js API)
 
-## Project Name
-Biyubi Clinic Growth Monitoring App 
+A simple **Node.js API** that integrates with **WhatsApp** to send notifications for **Growth Monitoring** of children aged 0-2 years old, based on **WHO Z Score** guidelines. This API uses the **whatsapp-web.js** library and **Socket.io** for real-time communication and scheduling notifications.
 
-## Project Description
-Simple Node JS API for Sending Whatsapp message Web Application with Growth Monitoring for 0-2 Years Child Accroding Z Score WHO Case Study
+---
 
-## Project Stack
-- Node JS
-- npm
-- whatsapp-web.js
-- socket.io
+## 📦 Tech Stack
+
+- **Node.js** for backend development
+- **npm** for dependency management
+- **whatsapp-web.js** for WhatsApp API integration
+- **Socket.io** for real-time communication
+
+---
+
+## 🔧 Features
+
+- 📱 **WhatsApp Integration**: Send automated WhatsApp messages to parents or healthcare professionals.
+- 📅 **Growth Monitoring Notifications**: Send reminders for growth checkups and immunization schedules.
+- 🕒 **Real-time Communication**: Use **Socket.io** for real-time updates and notifications.
+  
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Node.js** (latest version recommended)
+- **npm** (for package management)
+
+### Installation
+
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/izzatarramsyah/nodejs-biyubi-clinic-wa-server
+    cd biyubi-clinic-growth-monitoring-node-api
+    ```
+
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3. **Configure WhatsApp Web**: Make sure you have a WhatsApp Web instance running and configure the necessary connection settings in the application.
+
+4. **Run the application**:
+    ```bash
+    npm start
+    ```
+
+5. **Access the API**: The API should now be available at `http://localhost:3000`.
+
+---
